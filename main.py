@@ -34,7 +34,8 @@ all_tickers = [
 ]
 
 # Multiselect input for stocks
-selected_tickers = st.sidebar.multiselect("Select Stocks", options=all_tickers, default=all_tickers)
+default_subset = all_tickers[:10]
+selected_tickers = st.sidebar.multiselect("Select Stocks", options=all_tickers, default=default_subset)
 
 
 # Step 1: Load Historical Data
@@ -154,6 +155,7 @@ for cluster in range(n_clusters):
 
 summary_df = pd.DataFrame(cluster_summary).T
 st.dataframe(summary_df.style.format({"Mean Return": "{:.4f}", "Volatility": "{:.4f}"}))
+
 
 
 
