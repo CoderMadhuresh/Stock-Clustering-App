@@ -57,9 +57,9 @@ returns_clean = returns.dropna(axis=1)
 returns_clean = returns_clean.apply(pd.to_numeric, errors='coerce')
 returns_clean = returns_clean.dropna(axis=1)
 X = returns_clean.T
-# if X.empty:
-#     st.error("❌ PCA input is empty. No valid stock data. Try selecting fewer or different tickers.")
-#     st.stop()
+if X.empty:
+    st.error("❌ PCA input is empty. No valid stock data. Try selecting fewer or different tickers.")
+    st.stop()
 
 if X.isnull().values.any():
     st.error("❌ PCA input still contains NaNs.")
@@ -154,6 +154,7 @@ for cluster in range(n_clusters):
 
 summary_df = pd.DataFrame(cluster_summary).T
 st.dataframe(summary_df.style.format({"Mean Return": "{:.4f}", "Volatility": "{:.4f}"}))
+
 
 
 
