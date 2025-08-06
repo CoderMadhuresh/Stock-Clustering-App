@@ -34,13 +34,12 @@ all_tickers = [
 ]
 
 # Multiselect input for stocks
-default_subset = all_tickers[:10]
-selected_tickers = st.sidebar.multiselect("Select Stocks", options=all_tickers, default=default_subset)
+selected_tickers = st.sidebar.multiselect("Select Stocks", options=all_tickers, default=all_tickers)
 
 
 # Step 1: Load Historical Data
 # Download closing prices from Yahoo Finance
-@st.cache_data(ttl=3600)
+@st.cache_data
 def load_data(tickers):
     df = yf.download(tickers, start='2000-01-01', end='2025-06-26')['Close']
     return df
@@ -155,6 +154,7 @@ for cluster in range(n_clusters):
 
 summary_df = pd.DataFrame(cluster_summary).T
 st.dataframe(summary_df.style.format({"Mean Return": "{:.4f}", "Volatility": "{:.4f}"}))
+
 
 
 
