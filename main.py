@@ -53,8 +53,33 @@ returns = np.log(data / data.shift(1)).dropna()
 
 # Step 3: Apply PCA (Dimensionality Reduction)
 # Reduce high-dimensional return data into top 3 principal components
+# ===== Clean and Validate Returns for PCA =====
+
+# Drop stocks with any NaNs in their return series
+returns_clean = returns.dropna(axis=1)
+
+# Convert to numeric in case Yahoo gives unexpected types
+returns_clean = returns_clean.apply(pd.to_numeric, errors='coerce')
+
+# Drop again if anything became NaN after conversion
+returns_clean = returns_clean.dropna(axis=1)
+
+# Transpose for PCA: rows = stocks, cols = time
+X = returns_clean.T
+
+# Validation before PCA
+if X.empty:
+    st.error("❌ PCA input is empty. No valid stock data. Try selecting fewer or different tickers.")
+    st.stop()
+
+if X.isnull().values.any():
+    st.error("❌ PCA input still contains NaNs.")
+    st.stop()
+
+# Apply PCA
 pca = PCA(n_components=3)
-pca_scores = pca.fit_transform(returns.T)  # Transpose: rows = stocks
+pca_scores = pca.fit_transform(X)
+
 
 # Step 4: KMeans Clustering
 # Group similar stocks based on their PCA representation
@@ -141,5 +166,6 @@ for cluster in range(n_clusters):
 
 summary_df = pd.DataFrame(cluster_summary).T
 st.dataframe(summary_df.style.format({"Mean Return": "{:.4f}", "Volatility": "{:.4f}"}))
+
 
 
