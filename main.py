@@ -46,22 +46,12 @@ def load_data(tickers):
 
 
 data = load_data(selected_tickers)
-
 if len(data.columns) >= 2:
-    removed_ticker = data.columns[-1]  # Remove last ticker
-    
-    # Remove and re-add later
+    removed_ticker = data.columns[-1] 
     partial_data = data.drop(columns=[removed_ticker])
-    
-    # Calculate returns for partial data
     returns_partial = np.log(partial_data / partial_data.shift(1)).dropna()
-    
-    # Add back the removed ticker after return calculation
     full_returns = np.log(data / data.shift(1)).dropna()
-    
-    # Replace returns with updated version that includes all tickers
     returns = full_returns
-
 else:
     st.error("❌ Not enough tickers selected to perform PCA.")
     st.stop()
@@ -173,14 +163,3 @@ for cluster in range(n_clusters):
 
 summary_df = pd.DataFrame(cluster_summary).T
 st.dataframe(summary_df.style.format({"Mean Return": "{:.4f}", "Volatility": "{:.4f}"}))
-
-
-
-
-
-
-
-
-
-
-
