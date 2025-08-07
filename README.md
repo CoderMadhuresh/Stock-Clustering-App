@@ -127,7 +127,7 @@ Cluster 9: ASIANPAINT.NS, HINDUNILVR.NS, ITC.NS, NESTLEIND.NS, TATACONSUM.NS
 pip install streamlit yfinance pandas numpy scikit-learn matplotlib seaborn
 streamlit run main.py
 ```
-_You can also try this program on my Streamlit App -> [stock Clustering using PCA and KMeans](https://stock-clustering-app.streamlit.app)_
+## _You can also try this program on my Streamlit App -> [stock Clustering using PCA and KMeans](https://stock-clustering-app.streamlit.app)_
 ## Contributing
 * Fork the repository
 * Create a feature branch
