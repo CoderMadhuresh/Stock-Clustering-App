@@ -1,4 +1,4 @@
-# Stock Clustering using PCA and KMeans
+# 📊 Stock Clustering using PCA and KMeans
 
 _This project performs quantitative analysis of Indian equities by applying Principal Component Analysis (PCA) and KMeans Clustering on historical return data of Nifty 50 stocks. It helps in grouping similar stocks based on their return patterns and volatilities, providing a solid foundation for portfolio diversification, risk management, and factor analysis._
 
