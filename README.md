@@ -135,14 +135,14 @@ streamlit run main.py
 
 ## Screenshots
 
-[Assets/Asset 1.jpg
+[2D Graph
 ](https://github.com/CoderMadhuresh/Stock-Clustering-App/blob/main/Assets/2D%20Graph.png) </br>
 
-[Assets/Asset 2.jpg
-](https://github.com/CoderMadhuresh/SuperMarket/blob/96259d56f5984a2630357c933cd8405807e722b8/Assets/Asset%202.jpg) </br>
+[3D Graph
+](https://github.com/CoderMadhuresh/Stock-Clustering-App/blob/main/Assets/3D%20Graph.png) </br>
 
-[Assets/Asset 3.jpg
-](https://github.com/CoderMadhuresh/SuperMarket/blob/96259d56f5984a2630357c933cd8405807e722b8/Assets/Asset%203.jpg) </br>
+[Matrix Correlation
+](https://github.com/CoderMadhuresh/Stock-Clustering-App/blob/main/Assets/Correlation%20Matrix.png) </br>
 
-[Assets/Asset 4.jpg
-](https://github.com/CoderMadhuresh/SuperMarket/blob/96259d56f5984a2630357c933cd8405807e722b8/Assets/Asset%204.jpg) </br>
+[Volatility
+](https://github.com/CoderMadhuresh/Stock-Clustering-App/blob/main/Assets/Volatility.png) </br>
