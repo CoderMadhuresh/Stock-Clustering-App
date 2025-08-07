@@ -131,4 +131,18 @@ streamlit run main.py
 * Fork the repository
 * Create a feature branch
 * Commit your changes 
-* Push and submit a PR 
+* Push and submit a PR
+
+## Screenshots
+
+[Assets/Asset 1.jpg
+](https://github.com/CoderMadhuresh/Stock-Clustering-App/blob/main/Assets/2D%20Graph.png) </br>
+
+[Assets/Asset 2.jpg
+](https://github.com/CoderMadhuresh/SuperMarket/blob/96259d56f5984a2630357c933cd8405807e722b8/Assets/Asset%202.jpg) </br>
+
+[Assets/Asset 3.jpg
+](https://github.com/CoderMadhuresh/SuperMarket/blob/96259d56f5984a2630357c933cd8405807e722b8/Assets/Asset%203.jpg) </br>
+
+[Assets/Asset 4.jpg
+](https://github.com/CoderMadhuresh/SuperMarket/blob/96259d56f5984a2630357c933cd8405807e722b8/Assets/Asset%204.jpg) </br>
